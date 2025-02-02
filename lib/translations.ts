@@ -1,0 +1,56 @@
+export const translations = {
+  en: {
+    navigation: {
+      home: "Home",
+      demo: "Demo",
+      table: "Table",
+      installation: "Installation",
+      specifications: "Specifications",
+      configuration: "Configuration",
+      support: "Support",
+    },
+    sidebar: {
+      title: "Eaalim Font",
+      subtitle: "Documentation",
+      version: "Version 1.0.0",
+    },
+    table: {
+      no: "No.",
+      character: "Character",
+      unicode: "Unicode",
+      preview: "Preview",
+      actions: "Actions",
+      copy: "Copy",
+      copied: "Copied!",
+      view: "View",
+      hide: "Hide",
+    },
+  },
+  ar: {
+    navigation: {
+      home: "الرئيسية",
+      demo: "تجريب",
+      table: "الجدول",
+      installation: "التثبيت",
+      specifications: "المواصفات",
+      configuration: "الإعدادات",
+      support: "الدعم",
+    },
+    sidebar: {
+      title: "الخط",
+      subtitle: "التوثيق",
+      version: "الإصدار 1.0.0",
+    },
+    table: {
+      no: "رقم",
+      character: "الحرف",
+      unicode: "يونيكود",
+      preview: "معاينة",
+      actions: "إجراءات",
+      copy: "نسخ",
+      copied: "تم النسخ!",
+      view: "عرض",
+      hide: "إخفاء",
+    },
+  },
+}

@@ -1,0 +1,20 @@
+{
+  "name": "eaalim-font",
+  "version": "1.0.0",
+  "description": "Eaalim Arabic Font Package",
+  "main": "index.css",
+  "style": "index.css",
+  "files": [
+    "fonts/",
+    "index.css",
+    "README.md"
+  ],
+  "keywords": [
+    "font",
+    "arabic",
+    "eaalim",
+    "typography"
+  ],
+  "author": "Eaalim",
+  "license": "MIT"
+}
