@@ -10,15 +10,15 @@ import {
 import { Download, MoreHorizontal } from "lucide-react";
 
 const otherFormats = [
-  { name: "TTF Format", filename: "eaalim-font.ttf", type: "ttf" },
-  { name: "WOFF Format", filename: "eaalim-font.woff", type: "woff" },
-  { name: "WOFF2 Format", filename: "eaalim-font.woff2", type: "woff2" },
+  { name: "TTF Package", filename: "eaalim-font.zip", type: "ttf" },
+  { name: "WOFF Package", filename: "eaalim-font-woff.zip", type: "woff" },
+  { name: "WOFF2 Package", filename: "eaalim-font-woff2.zip", type: "woff2" },
 ];
 
 export default function DownloadPage() {
   const handleDownload = async (filename: string) => {
     try {
-      const response = await fetch(`/theFont/${filename}`);
+      const response = await fetch(`/${filename}`);
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
   
@@ -43,16 +43,16 @@ export default function DownloadPage() {
         <div className="p-6 bg-card rounded-lg border">
           <h2 className="text-xl md:text-2xl font-semibold mb-4">Download Options</h2>
           <p className="text-sm md:text-base text-muted-foreground mb-6">
-            Download the recommended OTF format or choose another format from the menu.
+            Download the recommended OTF package or choose another format from the menu.
           </p>
           
           <div className="flex gap-2 items-center">
             <Button 
-              onClick={() => handleDownload("eaalim-font.otf")}
+              onClick={() => handleDownload("eaalim-font-otf.zip")}
               className="flex-1 md:flex-none"
             >
               <Download className="mr-2 h-4 w-4" />
-              Download OTF (Recommended)
+              Download OTF Package (Recommended)
             </Button>
 
             <DropdownMenu>
@@ -79,16 +79,16 @@ export default function DownloadPage() {
 
         <div className="grid gap-4 text-sm md:text-base">
           <div className="p-4 bg-muted rounded-lg">
-            <h3 className="font-semibold mb-2">💡 Recommended Format (OTF)</h3>
+            <h3 className="font-semibold mb-2">💡 Recommended Package (OTF)</h3>
             <p className="text-muted-foreground">
-              The OTF format is recommended for most users. It provides the best quality and compatibility with modern design software.
+              The OTF package is recommended for most users. It includes all necessary files and provides the best quality and compatibility with modern design software.
             </p>
           </div>
           
           <div className="p-4 bg-muted rounded-lg">
-            <h3 className="font-semibold mb-2">🌐 Web Formats</h3>
+            <h3 className="font-semibold mb-2">🌐 Web Packages</h3>
             <p className="text-muted-foreground">
-              For web projects, WOFF2 and WOFF formats are available in the format menu for optimal web performance.
+              For web projects, WOFF2 and WOFF packages are available in the format menu. Each package contains optimized files for web performance.
             </p>
           </div>
         </div>

@@ -1,14 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import {
-  Toast,
-  ToastClose,
-  ToastDescription,
-  ToastProvider,
-  ToastViewport,
-} from "@/components/ui/toast"
-import { CircleCheck, X } from "lucide-react"
+import { useToast } from "@/hooks/use-toast"
+import { CircleCheck } from "lucide-react"
 import { useCallback, useEffect, useRef, useState } from "react"
 
 interface UseProgressTimerProps {
@@ -19,64 +13,75 @@ interface UseProgressTimerProps {
 
 function useProgressTimer({ duration, interval = 100, onComplete }: UseProgressTimerProps) {
   const [progress, setProgress] = useState(duration)
-  const timerRef = useRef(0)
-  const timerState = useRef({
-    startTime: 0,
-    remaining: duration,
-    isPaused: false,
-  })
+  const progressRef = useRef(duration)
+  const timerRef = useRef<NodeJS.Timeout>()
+  const startTimeRef = useRef<number>()
+  const pausedTimeRef = useRef<number>()
 
-  const cleanup = useCallback(() => {
-    window.clearInterval(timerRef.current)
-  }, [])
-
-  const reset = useCallback(() => {
-    cleanup()
-    setProgress(duration)
-    timerState.current = {
-      startTime: 0,
-      remaining: duration,
-      isPaused: false,
+  const cleanup = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current)
     }
-  }, [duration, cleanup])
+  }
 
   const start = useCallback(() => {
-    const state = timerState.current
-    state.startTime = Date.now()
-    state.isPaused = false
+    cleanup()
+    progressRef.current = duration
+    setProgress(duration)
+    startTimeRef.current = Date.now()
+    pausedTimeRef.current = undefined
 
-    timerRef.current = window.setInterval(() => {
-      const elapsedTime = Date.now() - state.startTime
-      const remaining = Math.max(0, state.remaining - elapsedTime)
+    timerRef.current = setInterval(() => {
+      const elapsedTime = Date.now() - (startTimeRef.current || 0)
+      const newProgress = Math.max(0, duration - elapsedTime)
+      progressRef.current = newProgress
+      setProgress(newProgress)
 
-      setProgress(remaining)
-
-      if (remaining <= 0) {
+      if (newProgress === 0) {
         cleanup()
         onComplete?.()
       }
     }, interval)
-  }, [interval, cleanup, onComplete])
+  }, [duration, interval, onComplete])
 
   const pause = useCallback(() => {
-    const state = timerState.current
-    if (!state.isPaused) {
-      cleanup()
-      state.remaining = Math.max(0, state.remaining - (Date.now() - state.startTime))
-      state.isPaused = true
+    if (timerRef.current) {
+      clearInterval(timerRef.current)
+      pausedTimeRef.current = progressRef.current
     }
-  }, [cleanup])
+  }, [])
 
   const resume = useCallback(() => {
-    const state = timerState.current
-    if (state.isPaused && state.remaining > 0) {
-      start()
+    if (pausedTimeRef.current !== undefined) {
+      cleanup()
+      startTimeRef.current = Date.now() - (duration - pausedTimeRef.current)
+      pausedTimeRef.current = undefined
+
+      timerRef.current = setInterval(() => {
+        const elapsedTime = Date.now() - (startTimeRef.current || 0)
+        const newProgress = Math.max(0, duration - elapsedTime)
+        progressRef.current = newProgress
+        setProgress(newProgress)
+
+        if (newProgress === 0) {
+          cleanup()
+          onComplete?.()
+        }
+      }, interval)
     }
-  }, [start])
+  }, [duration, interval, onComplete])
+
+  const reset = useCallback(() => {
+    cleanup()
+    progressRef.current = duration
+    setProgress(duration)
+    startTimeRef.current = undefined
+    pausedTimeRef.current = undefined
+  }, [duration])
 
   useEffect(() => {
     return cleanup
-  }, [cleanup])
+  }, [])
 
   return {
     progress,
@@ -87,77 +92,40 @@ function useProgressTimer({ duration, interval = 100, onComplete }: UseProgressT
   }
 }
 
-export default function Componnt() {
-  const [open, setOpen] = useState(false)
-  const toastDuration = 2000
-  const { progress, start, pause, resume, reset } = useProgressTimer({
-    duration: toastDuration,
-    onComplete: () => setOpen(false),
-  })
-
-  const handleOpenChange = useCallback(
-    (isOpen: boolean) => {
-      setOpen(isOpen)
-      if (isOpen) {
-        reset()
-        start()
-      }
-    },
-    [reset, start],
-  )
-
-  const handleButtonClick = useCallback(() => {
-    if (open) {
-      setOpen(false)
-      // Wait for the close animation to finish
-      window.setTimeout(() => {
-        handleOpenChange(true)
-      }, 150)
-    } else {
-      handleOpenChange(true)
-    }
-  }, [open, handleOpenChange])
-
-  return (
-    <ToastProvider swipeDirection="left">
-      <Button variant="outline" onClick={handleButtonClick} className="!text-black font-bold bg-emerald-400">
-        Copy
-      </Button>
-      <Toast open={open} onOpenChange={handleOpenChange} onPause={pause} className="absolute -top-[95vh] max-sm:right-0 max-sm:top-0 -right-[77vw]" onResume={resume}>
-        <div className="flex w-full justify-between gap-3">
-          <CircleCheck className="mt-0.5  text-blue-500" size={16} strokeWidth={2} aria-hidden="true" />
-          <div className="flex grow flex-col gap-3">
-            <div className="space-y-1 ">
-              <ToastDescription className="!text-white">UniCode Copied </ToastDescription>
-            </div>
-          </div>
-          <ToastClose asChild>
-            <Button
-              variant="ghost"
-              className="group -my-1.5 -me-2 size-8 shrink-0 p-0 hover:bg-transparent"
-              aria-label="Close notification"
-            >
-              <X
-                size={16}
-                strokeWidth={2}
-                className="opacity-60 transition-opacity group-hover:opacity-100"
-                aria-hidden="true"
-              />
-            </Button>
-          </ToastClose>
-        </div>
-        <div className="contents" aria-hidden="true">
-          <div
-            className="pointer-events-none absolute bottom-0 left-0 h-1 w-full bg-blue-500"
-            style={{
-              width: `${(progress / toastDuration) * 100}%`,
-              transition: "width 100ms linear",
-            }}
-          />
-        </div>
-      </Toast>
-      <ToastViewport className="sm:left-0 sm:right-auto" />
-    </ToastProvider>
-  )
+interface ComponentProps {
+  unicodeValue: string;
 }
 
+export default function Componnt({ unicodeValue }: ComponentProps) {
+  const { toast } = useToast()
+  const toastDuration = 2000
+
+  const handleClick = async () => {
+    try {
+      await navigator.clipboard.writeText(unicodeValue);
+      toast({
+        title: "Unicode Copied",
+        description: `Copied: ${unicodeValue}`,
+        duration: toastDuration
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to copy Unicode",
+        duration: toastDuration,
+        variant: "destructive"
+      })
+    }
+  }
+
+  return (
+    <Button
+      onClick={handleClick}
+      className="!text-black font-bold bg-emerald-400 hover:bg-emerald-500"
+      variant="outline"
+      size="sm"
+    >
+      Copy
+    </Button>
+  )
+}

@@ -123,12 +123,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   "flex items-center rounded-lg px-3 py-2 transition-all duration-300",
                   "hover:bg-accent hover:text-accent-foreground",
                   pathname === route.href ? "bg-accent text-accent-foreground" : "text-foreground",
-                  !isOpen && "md:justify-center px-2"
+                  !isOpen && "md:justify-center px-2",
+                  "gap-3 justify-start"
                 )}
               >
                 <Icon className="h-5 w-5 min-w-[20px]" />
                 {(isOpen || window.innerWidth < 768) && (
-                  <span className="ml-3 text-base">
+                  <span className="text-base">
                     {route.label}
                   </span>
                 )}
