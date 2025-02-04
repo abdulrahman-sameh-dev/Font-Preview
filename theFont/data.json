@@ -1092,38 +1092,38 @@
     "status": "Ayat"
   },
   {
-    "id": "202",
-    "Number": "202",
+    "id": "183",
+    "Number": "183",
     "Unicode": "ᠺ",
     "status": "Ayat"
   },
   {
-    "id": "203",
-    "Number": "203",
+    "id": "184",
+    "Number": "184",
     "Unicode": "ᡊ",
     "status": "Ayat"
   },
   {
-    "id": "204",
-    "Number": "204",
+    "id": "185",
+    "Number": "185",
     "Unicode": "ᡚ",
     "status": "Ayat"
   },
   {
-    "id": "205",
-    "Number": "205",
+    "id": "186",
+    "Number": "186",
     "Unicode": "ᡪ",
     "status": "Ayat"
   },
   {
-    "id": "206",
-    "Number": "206",
+    "id": "187",
+    "Number": "187",
     "Unicode": "᡺",
     "status": "Ayat"
   },
   {
-    "id": "207",
-    "Number": "207",
+    "id": "188",
+    "Number": "188",
     "Unicode": "ᢊ",
     "status": "Ayat"
   },
@@ -1134,74 +1134,74 @@
     "status": "Ayat"
   },
   {
-    "id": "209",
-    "Number": "209",
+    "id": "190",
+    "Number": "190",
     "Unicode": "ᤊ",
     "status": "Ayat"
   },
   {
-    "id": "210",
-    "Number": "210",
+    "id": "191",
+    "Number": "191",
     "Unicode": "ᤚ",
     "status": "Ayat"
   },
   {
-    "id": "211",
-    "Number": "211",
+    "id": "192",
+    "Number": "192",
     "Unicode": "ᤪ",
     "status": "Ayat"
   },
   {
-    "id": "212",
-    "Number": "212",
+    "id": "193",
+    "Number": "193",
     "Unicode": "᤺",
     "status": "Ayat"
   },
   {
-    "id": "213",
-    "Number": "213",
+    "id": "194",
+    "Number": "194",
     "Unicode": "᥊",
     "status": "Ayat"
   },
   {
-    "id": "214",
-    "Number": "214",
+    "id": "195",
+    "Number": "195",
     "Unicode": "ᥚ",
     "status": "Ayat"
   },
   {
-    "id": "215",
-    "Number": "215",
+    "id": "196",
+    "Number": "196",
     "Unicode": "ᥪ",
     "status": "Ayat"
   },
   {
-    "id": "216",
-    "Number": "216",
+    "id": "197",
+    "Number": "197",
     "Unicode": "᥺",
     "status": "Ayat"
   },
   {
-    "id": "217",
-    "Number": "217",
+    "id": "198",
+    "Number": "198",
     "Unicode": "ᦊ",
     "status": "Ayat"
   },
   {
-    "id": "218",
-    "Number": "218",
+    "id": "199",
+    "Number": "199",
     "Unicode": "ᦚ",
     "status": "Ayat"
   },
   {
-    "id": "219",
-    "Number": "219",
+    "id": "200",
+    "Number": "200",
     "Unicode": " ",
     "status": "Ayat"
   },
   {
-    "id": "220",
-    "Number": "220",
+    "id": "201",
+    "Number": "201",
     "Unicode": "‚",
     "status": "Ayat"
   },
@@ -1226,7 +1226,7 @@
   {
     "id": "205",
     "Number": "205",
-    "Unicode": "⁊",
+    "Unicode": "⁚",
     "status": "Ayat"
   },
   {
@@ -1322,433 +1322,439 @@
   {
     "id": "221",
     "Number": "221",
-    "Unicode": "ᔊ",
+    "Unicode": "√",
     "status": "Ayat"
   },
   {
     "id": "222",
     "Number": "222",
-    "Unicode": "ᔚ",
+    "Unicode": "∪",
     "status": "Ayat"
   },
   {
     "id": "223",
     "Number": "223",
-    "Unicode": "ᔪ",
+    "Unicode": "∺",
     "status": "Ayat"
   },
   {
     "id": "224",
     "Number": "224",
-    "Unicode": "ᔺ",
+    "Unicode": "≊",
     "status": "Ayat"
   },
   {
     "id": "225",
     "Number": "225",
-    "Unicode": "ᕊ",
+    "Unicode": "≚",
     "status": "Ayat"
   },
   {
     "id": "226",
     "Number": "226",
-    "Unicode": "ᕚ",
+    "Unicode": "≪",
     "status": "Ayat"
   },
   {
     "id": "227",
     "Number": "227",
-    "Unicode": "ᕪ",
+    "Unicode": "≺",
     "status": "Ayat"
   },
   {
     "id": "228",
     "Number": "228",
-    "Unicode": "ᕺ",
+    "Unicode": "⊊",
     "status": "Ayat"
   },
   {
     "id": "229",
     "Number": "229",
-    "Unicode": "ᖊ",
+    "Unicode": "⊚",
     "status": "Ayat"
   },
   {
     "id": "230",
     "Number": "230",
-    "Unicode": "ᖚ",
+    "Unicode": "⌊",
     "status": "Ayat"
   },
   {
     "id": "231",
     "Number": "231",
-    "Unicode": "ᘊ",
+    "Unicode": "⌚",
     "status": "Ayat"
   },
   {
     "id": "232",
     "Number": "232",
-    "Unicode": "ᘚ",
+    "Unicode": "〉",
     "status": "Ayat"
   },
   {
     "id": "233",
     "Number": "233",
-    "Unicode": "ᘪ",
+    "Unicode": "⌺",
     "status": "Ayat"
   },
   {
     "id": "234",
     "Number": "234",
-    "Unicode": "ᘺ",
+    "Unicode": "⍊",
     "status": "Ayat"
   },
   {
     "id": "235",
     "Number": "235",
-    "Unicode": "ᙊ",
+    "Unicode": "⍚",
     "status": "Ayat"
   },
   {
     "id": "236",
     "Number": "236",
-    "Unicode": "ᙚ",
+    "Unicode": "⍪",
     "status": "Ayat"
   },
   {
     "id": "237",
     "Number": "237",
-    "Unicode": "ᙪ",
+    "Unicode": "⍺",
     "status": "Ayat"
   },
   {
     "id": "238",
     "Number": "238",
-    "Unicode": "ᙺ",
+    "Unicode": "⎊",
     "status": "Ayat"
   },
   {
     "id": "239",
     "Number": "239",
-    "Unicode": "ᚊ",
+    "Unicode": "⎚",
     "status": "Ayat"
   },
   {
     "id": "240",
     "Number": "240",
-    "Unicode": "ᚚ",
+    "Unicode": "␊",
     "status": "Ayat"
   },
   {
     "id": "241",
     "Number": "241",
-    "Unicode": "ᜊ",
+    "Unicode": "␚",
     "status": "Ayat"
   },
   {
     "id": "242",
     "Number": "242",
-    "Unicode": "᜚",
+    "Unicode": "␪",
     "status": "Ayat"
   },
   {
     "id": "243",
     "Number": "243",
-    "Unicode": "ᜪ",
+    "Unicode": "␺",
     "status": "Ayat"
   },
   {
     "id": "244",
     "Number": "244",
-    "Unicode": "᜺",
+    "Unicode": "⑊",
     "status": "Ayat"
   },
   {
     "id": "245",
     "Number": "245",
-    "Unicode": "ᝊ",
+    "Unicode": "⑚",
     "status": "Ayat"
   },
   {
     "id": "246",
     "Number": "246",
-    "Unicode": "᝚",
+    "Unicode": "⑪",
     "status": "Ayat"
   },
   {
     "id": "247",
     "Number": "247",
-    "Unicode": "ᝪ",
+    "Unicode": "⑺",
     "status": "Ayat"
   },
   {
     "id": "248",
     "Number": "248",
-    "Unicode": "᝺",
+    "Unicode": "⒊",
     "status": "Ayat"
   },
   {
     "id": "249",
     "Number": "249",
-    "Unicode": "ដ",
+    "Unicode": "⒚",
     "status": "Ayat"
   },
   {
     "id": "250",
     "Number": "250",
-    "Unicode": "រ",
+    "Unicode": "┊",
     "status": "Ayat"
   },
   {
     "id": "251",
     "Number": "251",
-    "Unicode": "᠊",
+    "Unicode": "ɑ",
     "status": "Ayat"
   },
   {
     "id": "252",
     "Number": "252",
-    "Unicode": "᠚",
+    "Unicode": "ɒ",
     "status": "Ayat"
   },
   {
     "id": "253",
     "Number": "253",
-    "Unicode": "ᠪ",
+    "Unicode": "┺",
     "status": "Ayat"
   },
   {
     "id": "254",
     "Number": "254",
-    "Unicode": "ᠺ",
+    "Unicode": "╊",
     "status": "Ayat"
   },
   {
     "id": "255",
     "Number": "255",
-    "Unicode": "ᡊ",
+    "Unicode": "╚",
     "status": "Ayat"
   },
   {
     "id": "256",
     "Number": "256",
-    "Unicode": "ᡚ",
+    "Unicode": "╪",
     "status": "Ayat"
   },
   {
     "id": "257",
     "Number": "257",
-    "Unicode": "ᡪ",
+    "Unicode": "╺",
     "status": "Ayat"
   },
   {
     "id": "258",
     "Number": "258",
-    "Unicode": "᡺",
+    "Unicode": "▊",
     "status": "Ayat"
   },
   {
     "id": "259",
     "Number": "259",
-    "Unicode": "ᢊ",
+    "Unicode": "▚",
     "status": "Ayat"
   },
   {
     "id": "260",
     "Number": "260",
-    "Unicode": "ᢚ",
+    "Unicode": "ɠ",
     "status": "Ayat"
   },
   {
     "id": "261",
     "Number": "261",
-    "Unicode": "ᤊ",
+    "Unicode": "☚",
     "status": "Ayat"
   },
   {
     "id": "262",
     "Number": "262",
-    "Unicode": "ᤚ",
+    "Unicode": "☪",
     "status": "Ayat"
   },
   {
     "id": "263",
     "Number": "263",
-    "Unicode": "ᤪ",
+    "Unicode": "ɣ",
     "status": "Ayat"
   },
   {
     "id": "264",
     "Number": "264",
-    "Unicode": "᤺",
+    "Unicode": "♊",
     "status": "Ayat"
   },
   {
     "id": "265",
     "Number": "265",
-    "Unicode": "᥊",
+    "Unicode": "♚",
     "status": "Ayat"
   },
   {
     "id": "266",
     "Number": "266",
-    "Unicode": "ᥚ",
+    "Unicode": "♪",
     "status": "Ayat"
   },
   {
     "id": "267",
     "Number": "267",
-    "Unicode": "ᥪ",
+    "Unicode": "♺",
     "status": "Ayat"
   },
   {
     "id": "268",
     "Number": "268",
-    "Unicode": "᥺",
+    "Unicode": "⚊",
     "status": "Ayat"
   },
   {
     "id": "269",
     "Number": "269",
-    "Unicode": "ᦊ",
+    "Unicode": "⚚",
     "status": "Ayat"
   },
   {
     "id": "270",
     "Number": "270",
-    "Unicode": "ᦚ",
+    "Unicode": "✊",
+    "status": "Ayat"
+  },
+  {
+    "id": "271",
+    "Number": "271",
+    "Unicode": "✚",
+    "status": "Ayat"
+  },
+  {
+    "id": "272",
+    "Number": "272",
+    "Unicode": "✪",
+    "status": "Ayat"
+  },
+  {
+    "id": "273",
+    "Number": "273",
+    "Unicode": "✺",
+    "status": "Ayat"
+  },
+  {
+    "id": "274",
+    "Number": "274",
+    "Unicode": "❊",
+    "status": "Ayat"
+  },
+  {
+    "id": "275",
+    "Number": "275",
+    "Unicode": "❚",
+    "status": "Ayat"
+  },
+  {
+    "id": "276",
+    "Number": "276",
+    "Unicode": "❪",
+    "status": "Ayat"
+  },
+  {
+    "id": "277",
+    "Number": "277",
+    "Unicode": "❺",
+    "status": "Ayat"
+  },
+  {
+    "id": "278",
+    "Number": "278",
+    "Unicode": "➊",
+    "status": "Ayat"
+  },
+  {
+    "id": "279",
+    "Number": "279",
+    "Unicode": "➚",
     "status": "Ayat"
   },
   {
     "id": "280",
     "Number": "280",
-    "Unicode": " ",
+    "Unicode": "⠊",
     "status": "Ayat"
   },
   {
-    "id": "220",
-    "Number": "220",
-    "Unicode": "‚",
+    "id": "281",
+    "Number": "281",
+    "Unicode": "⠚",
     "status": "Ayat"
   },
   {
-    "id": "202",
-    "Number": "202",
-    "Unicode": "‪",
+    "id": "282",
+    "Number": "282",
+    "Unicode": "⠪",
     "status": "Ayat"
   },
   {
-    "id": "203",
-    "Number": "203",
-    "Unicode": "›",
+    "id": "283",
+    "Number": "283",
+    "Unicode": "⠺",
     "status": "Ayat"
   },
   {
-    "id": "204",
-    "Number": "204",
-    "Unicode": "⁊",
+    "id": "284",
+    "Number": "284",
+    "Unicode": "⡊",
     "status": "Ayat"
   },
   {
-    "id": "205",
-    "Number": "205",
-    "Unicode": "⁊",
+    "id": "285",
+    "Number": "285",
+    "Unicode": "⡚",
     "status": "Ayat"
   },
   {
-    "id": "206",
-    "Number": "206",
-    "Unicode": "⁪",
+    "id": "286",
+    "Number": "286",
+    "Unicode": "⡪",
     "status": "Ayat"
   },
   {
-    "id": "207",
-    "Number": "207",
-    "Unicode": "⁺",
-    "status": "Ayat"
+    "id": "ب",
+    "Number": "287",
+    "Unicode": "£",
+    "status": "Letters"
   },
   {
-    "id": "208",
-    "Number": "208",
-    "Unicode": "₊",
-    "status": "Ayat"
+    "id": "ن",
+    "Number": "288",
+    "Unicode": "¤",
+    "status": "Letters"
   },
   {
-    "id": "209",
-    "Number": "209",
-    "Unicode": "ₚ",
-    "status": "Ayat"
+    "id": "ي",
+    "Number": "289",
+    "Unicode": "¥",
+    "status": "Letters"
   },
   {
-    "id": "210",
-    "Number": "210",
-    "Unicode": "Ȑ",
-    "status": "Ayat"
+    "id": "ك",
+    "Number": "290",
+    "Unicode": "⍴",
+    "status": "Letters"
   },
   {
-    "id": "211",
-    "Number": "211",
-    "Unicode": "ℚ",
-    "status": "Ayat"
+    "id": "ق",
+    "Number": "291",
+    "Unicode": "É",
+    "status": "Letters"
   },
   {
-    "id": "212",
-    "Number": "212",
-    "Unicode": "K",
-    "status": "Ayat"
+    "id": "م",
+    "Number": "292",
+    "Unicode": "ą",
+    "status": "Letters"
   },
   {
-    "id": "213",
-    "Number": "213",
-    "Unicode": "℺",
-    "status": "Ayat"
-  },
-  {
-    "id": "214",
-    "Number": "214",
-    "Unicode": "⅊",
-    "status": "Ayat"
-  },
-  {
-    "id": "215",
-    "Number": "215",
-    "Unicode": "⅚",
-    "status": "Ayat"
-  },
-  {
-    "id": "216",
-    "Number": "216",
-    "Unicode": "Ⅺ",
-    "status": "Ayat"
-  },
-  {
-    "id": "217",
-    "Number": "217",
-    "Unicode": "ⅺ",
-    "status": "Ayat"
-  },
-  {
-    "id": "218",
-    "Number": "218",
-    "Unicode": "↊",
-    "status": "Ayat"
-  },
-  {
-    "id": "219",
-    "Number": "219",
-    "Unicode": "↚",
-    "status": "Ayat"
-  },
-  {
-    "id": "220",
-    "Number": "220",
-    "Unicode": "∊",
-    "status": "Ayat"
-  },
-  {
-    "id":"221",
-    "Number": "221",
-    "Unicode": "∋",
+    "id": "ت",
+    "Number": "293",
+    "Unicode": "Ē",
     "status": "Letters"
   }
 ]
