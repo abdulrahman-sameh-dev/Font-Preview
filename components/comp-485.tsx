@@ -84,7 +84,6 @@ import {
 } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import Componnt from "./comp-298";
-import { CodeBlock } from "./ui/code-block";
 
 // Define the type for the table data
 type Item = {
@@ -107,27 +106,6 @@ const statusFilterFn: FilterFn<Item> = (row, columnId, filterValue: string[]) =>
   const status = row.getValue(columnId) as string;
   return filterValue.includes(status);
 };
-
-<CodeBlock
-language="typescript"
-code={`import localFont from 'next/font/local'
-
-const eaalimFont = localFont({
-src: './fonts/eaalim-font.otf',
-display: 'swap',
-variable: '--font-eaalim',
-})
-
-// Add to your root layout
-<html lang="ar" className={eaalimFont.variable}>
-...
-</html>
-
-// Use in your CSS
-.arabic-text {
-font-family: var(--font-eaalim);
-}`}
-/>
 
 // Define the columns for the table
 const columns: ColumnDef<Item>[] = [
@@ -183,7 +161,7 @@ const columns: ColumnDef<Item>[] = [
       return (
         <div style={{ 
           fontSize: "24px",
-          fontFamily: "var(--font-eaalim)"
+          fontFamily: "eaalimFont"
           
         }}
           className="arabic-text"
