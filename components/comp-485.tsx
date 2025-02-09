@@ -84,6 +84,7 @@ import {
 } from "lucide-react";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import Componnt from "./comp-298";
+import { CodeBlock } from "./ui/code-block";
 
 // Define the type for the table data
 type Item = {
@@ -107,35 +108,57 @@ const statusFilterFn: FilterFn<Item> = (row, columnId, filterValue: string[]) =>
   return filterValue.includes(status);
 };
 
+<CodeBlock
+language="typescript"
+code={`import localFont from 'next/font/local'
+
+const eaalimFont = localFont({
+src: './fonts/eaalim-font.otf',
+display: 'swap',
+variable: '--font-eaalim',
+})
+
+// Add to your root layout
+<html lang="ar" className={eaalimFont.variable}>
+...
+</html>
+
+// Use in your CSS
+.arabic-text {
+font-family: var(--font-eaalim);
+}`}
+/>
+
 // Define the columns for the table
 const columns: ColumnDef<Item>[] = [
+
   {
-    header: "Number",
-    accessorKey: "Number",
-    cell: ({ row }) => <div className="font-medium">{row.getValue("Number")}</div>,
+    header: "Copy", 
+    accessorKey: "copy",
+    cell: ({ row }) => {
+      const unicodeValue: string = row.getValue("Unicode");
+      return <Componnt unicodeValue={unicodeValue} />;
+    },
+    size: 100, 
+    minSize: 80,
+    maxSize: 120,
+  },{
+    header: "Status",
+    accessorKey: "status",
+    cell: ({ row }) => (
+      <Badge
+        className={cn(
+          row.getValue("status") === "Ayat" && "bg-red-600   text-primary-foreground",
+        )}
+      >
+        {row.getValue("status")}
+      </Badge>
+    ),
     size: 100,
     minSize: 80,
     maxSize: 120,
-  },
-  {
-    header: "Unicode",
-    accessorKey: "Unicode",
-    cell: ({ row }) => {
-      const value = row.getValue("Unicode") as string;
-      return (
-        <div style={{ 
-          fontSize: "24px",
-          fontFamily: "var(--font-eaalim)"
-        }}>
-          {value}
-        </div>
-      );
-    },
-    size: 150,
-    minSize: 120,
-    maxSize: 200,
-  },
-  {
+    filterFn: statusFilterFn,
+  },{
     header: "View",
     accessorKey: "View",
     cell: ({ row }) => {
@@ -152,35 +175,34 @@ const columns: ColumnDef<Item>[] = [
     size: 150,
     minSize: 120,
     maxSize: 200,
-  },
-  {
-    header: "Status",
-    accessorKey: "status",
-    cell: ({ row }) => (
-      <Badge
-        className={cn(
-          row.getValue("status") === "Ayat" && "bg-red-600   text-primary-foreground",
-        )}
-      >
-        {row.getValue("status")}
-      </Badge>
-    ),
+  },{
+    header: "Unicode",
+    accessorKey: "Unicode",
+    cell: ({ row }) => {
+      const value = row.getValue("Unicode") as string;
+      return (
+        <div style={{ 
+          fontSize: "24px",
+          fontFamily: "var(--font-eaalim)"
+          
+        }}
+          className="arabic-text"
+        >
+          {value}
+        </div>
+      );
+    },
+    size: 150,
+    minSize: 120,
+    maxSize: 200,
+  },{
+    header: "Number",
+    accessorKey: "Number",
+    cell: ({ row }) => <div className="font-medium">{row.getValue("Number")}</div>,
     size: 100,
     minSize: 80,
     maxSize: 120,
-    filterFn: statusFilterFn,
-  },
-  {
-    header: "Copy", 
-    accessorKey: "copy",
-    cell: ({ row }) => {
-      const unicodeValue: string = row.getValue("Unicode");
-      return <Componnt unicodeValue={unicodeValue} />;
-    },
-    size: 100, 
-    minSize: 80,
-    maxSize: 120,
-  },
+  },  
 ];
 
 export default function Component() {

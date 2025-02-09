@@ -6,7 +6,7 @@ import { Slider } from "@/components/ui/slider";
 import React from 'react';
 
 export default function Demo() {
-  const [testText, setTestText] = useState("بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ");
+  const [testText, setTestText] = useState("بِسۡـــمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ");
   const [fontSize, setFontSize] = useState([32]);
 
   // التحقق مما إذا كان النص يحتوي على أحرف عربية

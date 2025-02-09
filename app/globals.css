@@ -111,6 +111,10 @@
   transition: none !important;
 }
 
+.arabic-text {
+  font-family: var(--font-eaalim);
+}
+
 /* RTL Support */
 [dir="rtl"] {
   .mr-1 { margin-right: 0; margin-left: 0.25rem; }
