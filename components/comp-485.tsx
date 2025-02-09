@@ -125,7 +125,7 @@ const columns: ColumnDef<Item>[] = [
       return (
         <div style={{ 
           fontSize: "24px",
-          fontFamily: "eaalim-font"
+          fontFamily: "var(--font-eaalim)"
         }}>
           {value}
         </div>
@@ -143,7 +143,7 @@ const columns: ColumnDef<Item>[] = [
       return (
         <div style={{ 
           fontSize: "24px",
-          fontFamily: "eaalim-font"
+          fontFamily: "var(--font-eaalim)"
         }}>
           {unicodeValue}
         </div>
