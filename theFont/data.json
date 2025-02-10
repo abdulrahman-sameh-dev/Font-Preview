@@ -1717,42 +1717,49 @@
   },
   {
     "id": "ب",
+    "Name":"ب",
     "Number": "287",
     "Unicode": "£",
     "status": "Letters"
   },
   {
     "id": "ن",
+    "Name":"ن",
     "Number": "288",
     "Unicode": "¤",
     "status": "Letters"
   },
   {
     "id": "ي",
+    "Name":"ي",
     "Number": "289",
     "Unicode": "¥",
     "status": "Letters"
   },
   {
     "id": "ك",
+    "Name":"ك",
     "Number": "290",
     "Unicode": "⍴",
     "status": "Letters"
   },
   {
     "id": "ق",
+    "Name":"ق",
     "Number": "291",
     "Unicode": "É",
     "status": "Letters"
   },
   {
     "id": "م",
+    "Name":"م",
     "Number": "292",
     "Unicode": "ą",
     "status": "Letters"
   },
   {
     "id": "ت",
+    "Name":"ت",
     "Number": "293",
     "Unicode": "Ē",
     "status": "Letters"

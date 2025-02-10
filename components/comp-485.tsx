@@ -174,6 +174,26 @@ const columns: ColumnDef<Item>[] = [
     minSize: 120,
     maxSize: 200,
   },{
+    header: "Name",
+    accessorKey: "Name",
+    cell: ({ row }) => {
+      const value = row.getValue("Name") as string;
+      return (
+        <div style={{ 
+          fontSize: "24px",
+          fontFamily: "eaalimFont"
+          
+        }}
+          className="arabic-text"
+        >
+          {value}
+        </div>
+      );
+    },
+    size: 150,
+    minSize: 120,
+    maxSize: 200,
+  },{
     header: "Number",
     accessorKey: "Number",
     cell: ({ row }) => <div className="font-medium">{row.getValue("Number")}</div>,
